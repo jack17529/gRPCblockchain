@@ -10,7 +10,7 @@ Use `go env` command.
 2. Install it using go install command.
 3. Import it in the file using the address relative to $GOPATH
 
-For Example-
+For Example
 
 For a package file "blockchain.go" present in `/src/github.com/faith/00-grpc/server/blockchain`
 Can be used inside a file "main.go" present in `/src/github.com/faith/00-grpc/server`
