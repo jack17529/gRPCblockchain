@@ -31,7 +31,8 @@ Using `"github.com/faith/00-grpc/server/blockchain"` in imports.
             - client
               - main.go
             - proto
-              
+              - blockchain.proto
+              - blockchain.pb.go
     - pkg
     - bin
     
@@ -45,3 +46,4 @@ Using `"github.com/faith/00-grpc/server/blockchain"` in imports.
 4. https://www.digitalocean.com/community/tutorials/how-to-build-go-executables-for-multiple-platforms-on-ubuntu-16-04
 5. https://stackoverflow.com/questions/47347191/go-error-unexpected-nul-in-input?rq=1
 6. https://www.quora.com/What-is-the-difference-between-build-and-install-in-Go
+7. https://www.youtube.com/watch?v=gju-bml4kdw
