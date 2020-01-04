@@ -50,3 +50,4 @@ Using `"github.com/faith/00-grpc/server/blockchain"` in imports.
 5. https://stackoverflow.com/questions/47347191/go-error-unexpected-nul-in-input?rq=1
 6. https://www.quora.com/What-is-the-difference-between-build-and-install-in-Go
 7. https://www.youtube.com/watch?v=gju-bml4kdw
+8. https://github.com/tensor-programming/golang-blockchain/tree/part_10
