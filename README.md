@@ -38,7 +38,7 @@ Using `"github.com/faith/00-grpc/server/blockchain"` in imports.
 ## Running
 
 1. Start the server's main.go file using `go run main.go`.
-2. In other window add blocks or get the Blockchain using client's main.go file using `go run main.go` with tag `-- list` or `-- add`.
+2. In other window add blocks or get the Blockchain with client's main.go file using `go run main.go` with tag `-- list` or `-- add`.
 3. Note there si no database all the blockchain data is stored in the server, as soon as the server file completes execution the data will be lost.
     
 ## References
