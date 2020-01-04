@@ -1,5 +1,4 @@
-# BlockchainServerAndClientUsinggRPC
-
+# gRPCblockchain
 ## How to know the value of Go Environment Variables?
 
 Use `go env` command.
