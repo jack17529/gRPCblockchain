@@ -1,28 +1,47 @@
-syntax = "proto3";
+syntax="proto3";
 
 package proto;
 
-service Blockchain {
-	rpc AddBlock(AddBlockRequest) returns (AddBlockResponse) {}
-	rpc GetBlockchain(GetBlockchainRequest) returns (GetBlockchainResponse) {}
+service Blockchain{
+    rpc AddBlock(AddBlockRequest) returns (AddBlockResponse) {}
+    rpc GetBlockchain(GetBlockchainRequest) returns (GetBlockchainResponse) {}
 }
 
-message AddBlockRequest {
-	string data = 1;
+message AddBlockRequest{
+    string data = 1;
 }
 
-message AddBlockResponse {
-	string hash = 1;
+message AddBlockResponse{
+    string hash = 1;
 }
 
-message Block {
-	string prevBlockHash = 1;
-	string data = 2;
-	string hash = 3;
+message GetBlockchainRequest{}
+
+message Block{
+    string hash=1;
+    string prevBlockHash=2;
+    string data=3;
 }
 
-message GetBlockchainRequest {}
-
-message GetBlockchainResponse {
-	repeated Block blocks = 1;
+message GetBlockchainResponse{
+    repeated Block blocks = 1;
 }
+
+// service user{
+//     rpc Login(LoginRequest) returns (Response) {}
+//     rpc Logout(EmptyRequest) returns (Response) {}
+// }
+
+// message LoginRequest{
+//     strig username = 1;
+//     string password = 2;
+// }
+
+// message Response{
+//     string responsemsg = 1;
+//     int32 responsecode = 2;
+// }
+
+// message EmptyRequest{
+    
+// }

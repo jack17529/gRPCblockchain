@@ -5,39 +5,36 @@ import (
 	"encoding/hex"
 )
 
-// Block keeps block headers
+// this will be package blockchain
+
+// because this is a blockchain package that is why we are doing it again.
+// although it is already present in the proto file.
 type Block struct {
-	Data          string
-	PrevBlockHash string
 	Hash          string
+	PrevBlockHash string
+	Data          string
 }
 
-// Blockchain keeps a array of Blocks
+// we only have block struct in proto file not this.
 type Blockchain struct {
 	Blocks []*Block
 }
 
-// setHash calculates and sets block hash
 func (b *Block) setHash() {
 	hash := sha256.Sum256([]byte(b.PrevBlockHash + b.Data))
 	b.Hash = hex.EncodeToString(hash[:])
 }
 
-// NewBlock creates and returns Block
+// we won't declare SHA encryption in this function but in its own function.
 func NewBlock(data string, prevBlockHash string) *Block {
-	block := &Block{data, prevBlockHash, ""}
+	block := &Block{
+		Data:          data,
+		PrevBlockHash: prevBlockHash,
+	}
 	block.setHash()
-
 	return block
 }
 
-// NewGenesisBlock creates and returns genesis Block
-// It is the first block in the blockchain, with data as genesis block and prev hash as nothing.
-func NewGenesisBlock() *Block {
-	return NewBlock("Genesis Block", "")
-}
-
-// AddBlock joins provided data as a block in the blockchain
 func (bc *Blockchain) AddBlock(data string) *Block {
 	prevBlock := bc.Blocks[len(bc.Blocks)-1]
 	newBlock := NewBlock(data, prevBlock.Hash)
@@ -46,7 +43,13 @@ func (bc *Blockchain) AddBlock(data string) *Block {
 	return newBlock
 }
 
-// NewBlockchain creates a new Blockchain with genesis Block
+// it's like a CTOR but in go
 func NewBlockchain() *Blockchain {
 	return &Blockchain{[]*Block{NewGenesisBlock()}}
 }
+
+func NewGenesisBlock() *Block {
+	return NewBlock("Genesis Block", "")
+}
+
+// we need two branches as this is getting messed up now.
