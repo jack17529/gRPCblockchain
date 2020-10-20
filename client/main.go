@@ -5,7 +5,7 @@ package main
 import (
 	"context"
 	"flag"
-	proto "gRPCmyTry/proto"
+	proto "gRPCblockchain/proto"
 	"log"
 	"time"
 
