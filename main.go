@@ -2,8 +2,8 @@ package main
 
 import (
 	"context"
-	proto "gRPCmyTry/proto"
-	blockchain "gRPCmyTry/server/blockchain"
+	proto "gRPCblockchain/proto"
+	blockchain "gRPCblockchain/server/blockchain"
 	"net"
 	"os"
 
