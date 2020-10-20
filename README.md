@@ -1,39 +1,5 @@
 # gRPCblockchain
-## How to know the value of Go Environment Variables?
-
-Use `go env` command.
-
-## Using custom made packages in Go
-
-1. Create the package in it's own folder.
-2. Install it using go install command.
-3. Import it in the file using the address relative to $GOPATH
-
-For Example
-
-For a package file "blockchain.go" present in `/src/github.com/faith/00-grpc/server/blockchain`
-Can be used inside a file "main.go" present in `/src/github.com/faith/00-grpc/server`
-Using `"github.com/faith/00-grpc/server/blockchain"` in imports.
-
-## Directory structure for Ubuntu
-
-- ~
-  - Go                              <- Where $GOPATH is set.
-    - src
-      - github.com
-        - faith
-          - grpcBlockchain                 <- Project name
-            - server
-              - blockchain          <- Each package needs to have it's own directory.
-                - blockchain.go
-              - main.go
-            - client
-              - main.go
-            - proto
-              - blockchain.proto
-              - blockchain.pb.go
-    - pkg
-    - bin
+Created a grpc blockchain server and client that use protobuf for communication. Used grpcurl for testing the server. Implemented client and server side logging.
     
 ## Running
 
