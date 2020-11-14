@@ -51,5 +51,3 @@ func NewBlockchain() *Blockchain {
 func NewGenesisBlock() *Block {
 	return NewBlock("Genesis Block", "")
 }
-
-// we need two branches as this is getting messed up now.
